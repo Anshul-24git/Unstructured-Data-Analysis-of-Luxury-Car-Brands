@@ -1,69 +1,51 @@
-# 🏎️ Entry-Level Luxury Car Market Analysis using Unstructured Data
+# 🏎️ Analyzing Entry-Level Luxury Car Discussions Using NLP
 
-## 📘 Assignment Overview
-As analytics consultants for JD Power and Associates, we performed a competitive analysis of the entry-level luxury car market in the USA. The analysis was based on ~5000 social media posts from the Edmunds.com discussion forums. The focus was to extract insights from unstructured discussions without relying on sentiment analysis (assuming all sentiments are positive).
-
----
-
-## 🧪 Tasks & Methodology
-
-### ✅ Task A: Zipf’s Law
-- **Objective**: Test if forum discussions follow Zipf’s Law.
-- **Method**: Used word frequency analysis (without removing stopwords or stemming).
-- **Result**: Empirical data aligns with Zipf’s Law, verified visually and econometrically.
-
-### ✅ Task B: Brand Identification
-- **Extracted top 10 brands** by:
-  - Removing stopwords.
-  - Mapping car models to parent brands using a lookup list.
-  - Limiting brand count per post to 1 even if repeated.
-
-### ✅ Task C: Lift Ratio Calculation
-- **Purpose**: Measure co-occurrence strength of brand mentions.
-- **Approach**: Lift values calculated considering word distance ≤ 7 within a post.
-
-### ✅ Task D: MDS Map
-- **Tool**: Multi-Dimensional Scaling
-- **Insight**: Visualized brand similarities based on co-mentions.
-
-### ✅ Task E: Strategic Insights from C & D
-- Brands closer on the MDS map shared positioning.
-- Lift ratios revealed strong brand associations and competition.
-
-### ✅ Task F: Attribute Extraction
-- **Top 5 Car Attributes**: Extracted by frequency.
-- **Brand-Attribute Mapping**: Identified most associated brands per attribute.
-
-### ✅ Task G: Strategic Advice Based on Attributes
-- Provided brand-specific positioning strategies based on feature associations.
-
-### ✅ Task H: Aspirational Brand Analysis
-- **Metric**: Based on desire-related phrases (e.g., "want", "wish", "plan to buy").
-- **Outcome**: Identified the most aspirational brand and its business implications.
+## 📘 Project Overview
+This project explores user-generated discussions from Edmunds.com forums to uncover competitive insights in the entry-level luxury car market. Using web scraping, natural language processing (NLP), and statistical analysis, the goal was to identify brand perceptions, feature associations, and consumer aspirations.
 
 ---
 
-## 📂 Files
-- `UDA.py`: Contains all scraping, processing, and analysis scripts.
-- `README.md`: This file (project summary and documentation).
+## 🧠 What This Project Does
+- Scrapes thousands of real-world user posts from Edmunds forums.
+- Validates Zipf’s Law on raw textual data.
+- Extracts and ranks automotive brands based on mention frequency.
+- Measures brand associations using lift ratios.
+- Visualizes brand relationships using multi-dimensional scaling (MDS).
+- Identifies commonly discussed car features and maps them to specific brands.
+- Analyzes which brand appears most aspirational among users.
 
 ---
 
-## 🔧 Tools & Libraries
-- Python 3.x
-- BeautifulSoup, Requests (scraping)
-- NLTK (text processing)
-- Scikit-learn (MDS)
-- Matplotlib (visualization)
-- Pandas (data manipulation)
+## 📊 Key Insights
+- **Word frequencies** from organic discussions show strong adherence to Zipf's distribution.
+- **Top brands** emerged based on adjusted frequency counts, mapping models to parent brands.
+- **Lift ratios** revealed hidden relationships and co-mentions between competing brands.
+- **MDS visualizations** provided intuitive maps showing brand proximity in consumer minds.
+- **Car features** like performance, design, and reliability showed clear brand affinities.
+- **Aspirational brand analysis** highlighted which brand users most frequently expressed desire to own.
 
 ---
 
-## 📈 Key Takeaways
-- Zipf’s Law holds for real-world forum text data.
-- Top brands show nuanced associations with features.
-- Aspirational value can be data-driven, not just intuitive.
-- Strategic market positioning can be guided using simple lift-based metrics and visualizations.
+## ⚙️ Technologies Used
+- `Python 3.x`
+- `BeautifulSoup`, `Requests` (web scraping)
+- `NLTK` (text processing)
+- `Scikit-learn` (MDS)
+- `Pandas`, `NumPy` (data analysis)
+- `Matplotlib` (visualization)
+
+---
+
+## 📂 Project Structure
+- `assignment_1.py`: Core script containing all scraping, data transformation, analysis, and plotting code.
+- `README.md`: Documentation and project summary.
+
+---
+
+## 🚀 How to Run
+
+```bash
+python assignment_1.py
 
 ---
 
